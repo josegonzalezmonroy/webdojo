@@ -1,0 +1,23 @@
+meta {
+  name: Update a user
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3333/api/users/153
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Pedro Perez",
+    "email": "pedro@teste.com.br",
+    "password": "12312312312"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
